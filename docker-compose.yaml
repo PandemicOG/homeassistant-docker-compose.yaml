@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  homeassistant:
+    image: homeassistant/raspberrypi4-homeassistant:stable
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /path/to/config:/config
+    ports:
+      - "8123:8123"
